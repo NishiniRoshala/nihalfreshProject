@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse71.controller.HomePageController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="382.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="382.0" fitWidth="603.0" layoutY="-2.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../pic/113141.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="49.0" layoutY="40.0" prefHeight="256.0" prefWidth="496.0" text="FRUIT GARDEN" textAlignment="CENTER" textFill="#fcf9f9" wrapText="true">
+               <font>
+                  <Font name="Cooper Black" size="64.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="380.0" prefHeight="218.0" prefWidth="600.0" style="-fx-background-color: #f7dc6f;">
+         <children>
+            <ImageView fitHeight="194.0" fitWidth="591.0" layoutX="5.0" layoutY="15.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../pic/121709.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="109.0" layoutY="64.0" prefHeight="58.0" prefWidth="382.0" text="Nihal Fresh Fruits" textFill="#fcfafa">
+               <font>
+                  <Font name="Cooper Black" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="LoginPage" layoutX="494.0" layoutY="178.0" mnemonicParsing="false" onAction="#loginOnAction" style="-fx-background-color: #00CC33;" text="Login Page&gt;&gt;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse71.controller.EmployeeController">
+   <children>
+      <AnchorPane fx:id="employeeAn" layoutX="3.0" prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <ImageView fx:id="EmployeeImg" fitHeight="300.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../pic/123445.png" />
+               </image>
+               <effect>
+                  <BoxBlur />
+               </effect>
+            </ImageView>
+            <TextField fx:id="EmployeeID" layoutX="23.0" layoutY="24.0" style="-fx-background-color: #f5b7b1;" text="Employee ID">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="NameEmp" layoutX="23.0" layoutY="63.0" prefHeight="26.0" prefWidth="159.0" style="-fx-background-color: #f5b7b1;" text="Name" />
+            <TextField fx:id="PositionEmp" layoutX="23.0" layoutY="104.0" prefHeight="26.0" prefWidth="159.0" style="-fx-background-color: #f5b7b1;" text="Position" />
+            <TextField fx:id="DepartmentEmp" layoutX="23.0" layoutY="143.0" style="-fx-background-color: #f5b7b1;" text="Department" />
+            <TextField fx:id="SalaryEmp" layoutX="374.0" layoutY="91.0" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #f5b7b1;" text="Salary" />
+            <TextField fx:id="EmailEmp" layoutX="23.0" layoutY="183.0" style="-fx-background-color: #f5b7b1;" text="E mail" />
+            <TextField fx:id="PhoneEmp" layoutX="374.0" layoutY="155.0" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #f5b7b1;" text="Phone" />
+            <TextField fx:id="e000" layoutX="208.0" layoutY="24.0" promptText="e001" />
+            <TextField fx:id="empname" layoutX="208.0" layoutY="63.0" promptText="Name" />
+            <TextField fx:id="empPosition" layoutX="201.0" layoutY="104.0" promptText="Position" />
+            <TextField fx:id="EmpDepartment" layoutX="201.0" layoutY="143.0" promptText="Department" />
+            <TextField fx:id="EmpEmail" layoutX="201.0" layoutY="183.0" promptText="employee@gmail.com" />
+            <TextField fx:id="EmpSalary" layoutX="466.0" layoutY="91.0" prefHeight="26.0" prefWidth="128.0" promptText="100 000" />
+            <TextField fx:id="EmpPhone" layoutX="467.0" layoutY="156.0" prefHeight="26.0" prefWidth="128.0" promptText="07++++++++" />
+            <TableView fx:id="tableEMP" layoutY="275.0" prefHeight="321.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="tblgemp" prefWidth="75.0" text="EmployeeID" />
+                <TableColumn fx:id="tblemp" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="tblposition" prefWidth="75.20001220703125" text="Position" />
+                  <TableColumn fx:id="tbldepartment" prefWidth="88.80000305175781" text="Department" />
+                  <TableColumn fx:id="tblemail" prefWidth="88.7999267578125" text="Email" />
+                  <TableColumn fx:id="tblsalary" prefWidth="93.60003662109375" text="Salary" />
+                  <TableColumn fx:id="tblphone" prefWidth="104.79998779296875" text="Phone" />
+              </columns>
+            </TableView>
+            <Button fx:id="EmpGenaerateReport" layoutX="14.0" layoutY="235.0" mnemonicParsing="false" onAction="#EmpGenaerateReport" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: #9c27b0;" text="Generate Report" />
+            <Button fx:id="EmpDelete" layoutX="275.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #f44336;" text="Delete" />
+            <Button fx:id="EmpUpdate" layoutX="394.0" layoutY="235.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #ffc107;" text="update" />
+            <Button fx:id="EmpSave" layoutX="498.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #3f51b5;" text="save" />
+            <Button fx:id="EmpReport" layoutX="159.0" layoutY="234.0" mnemonicParsing="false" onAction="#EmpReport" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #cddc39;" text="Report" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

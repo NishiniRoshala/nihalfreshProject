@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse71.controller.SupplierController">
+   <children>
+      <AnchorPane layoutX="2.0" layoutY="-10.0" prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../pic/123509.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="43.0" layoutY="27.0" text="Supplier Id " AnchorPane.leftAnchor="20.0" />
+            <TextField fx:id="SName" layoutX="20.0" layoutY="73.0" text="Name" AnchorPane.leftAnchor="20.0" />
+            <TextField fx:id="Contactinfo" layoutX="20.0" layoutY="113.0" text="ContactInfo" AnchorPane.leftAnchor="20.0" />
+            <TextField fx:id="Sphone" layoutX="20.0" layoutY="159.0" text="Phone" AnchorPane.leftAnchor="20.0" />
+            <TextField fx:id="S0001" layoutX="247.0" layoutY="27.0" promptText="S0001" />
+            <TextField fx:id="sname" layoutX="247.0" layoutY="73.0" promptText="Name" />
+            <TextField fx:id="cInfo" layoutX="247.0" layoutY="113.0" promptText="ContactInfo" />
+            <TextField fx:id="PhoneSup" layoutX="247.0" layoutY="159.0" promptText="07--------" />
+            <Button fx:id="DeleteSup" layoutX="78.0" layoutY="245.0" mnemonicParsing="false" onAction="#DeleteSup" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #f44336;" text="Delete" />
+            <Button fx:id="UpdateSup" layoutX="287.0" layoutY="245.0" mnemonicParsing="false" onAction="#UpdateSup" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #ffc107;" text="Update" />
+            <Button fx:id="SaveSup" layoutX="453.0" layoutY="245.0" mnemonicParsing="false" onAction="#SaveSup" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #3f51b5;" text="Save" />
+            <TableView layoutY="300.0" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #29b6f6;">
+              <columns>
+                <TableColumn fx:id="tblSupplierId" prefWidth="139.20001530647278" text="Supplier Id" />
+                <TableColumn fx:id="tblSName" prefWidth="165.59996032714844" text="Name" />
+                  <TableColumn fx:id="tblContactInfo" prefWidth="156.0" text="ContactInfo" />
+                  <TableColumn fx:id="tblPhoneSUP" prefWidth="139.20001220703125" text="Phone" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

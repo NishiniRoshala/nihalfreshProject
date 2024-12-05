@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse71.controller.DashBoardController">
+   <children>
+      <AnchorPane fx:id="dashboard" layoutX="-1.0" layoutY="-1.0" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #17202a;">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="574.0" prefWidth="200.0" style="-fx-background-color: #fdfefe;">
+               <children>
+                  <ImageView fx:id="imgdb" fitHeight="574.0" fitWidth="200.0" layoutY="-1.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../pic/133018.png" />
+                     </image>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </ImageView>
+                  <TextField layoutX="24.0" layoutY="29.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #f39c12;" text="Fresh &amp;  Healthy">
+                     <font>
+                        <Font name="Cooper Black" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="CustomerBtn" layoutX="48.0" layoutY="102.0" mnemonicParsing="false" onAction="#CustomerOnAction" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: #239b56;" text="Customer">
+                     <font>
+                        <Font name="Cooper Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ProductionBtn" layoutX="51.0" layoutY="159.0" mnemonicParsing="false" onAction="#ProductionBtn" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #28b463;" text="Production">
+                     <font>
+                        <Font name="Cooper Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Inventory" layoutX="48.0" layoutY="259.0" mnemonicParsing="false" onAction="#Inventory" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #2ecc71;" text="Inventory" />
+                  <Button fx:id="Supplier" layoutX="52.0" layoutY="309.0" mnemonicParsing="false" onAction="#Supplier" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #58d68d;" text="Supplier" />
+                  <Button fx:id="Employee" layoutX="52.0" layoutY="360.0" mnemonicParsing="false" onAction="#Employee" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #82e0aa;" text="Employee" />
+                  <Button fx:id="TransAction" layoutX="51.0" layoutY="419.0" mnemonicParsing="false" onAction="#TransAction" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #abebc6;" text="Transaction" />
+                  <Button fx:id="Delivery" layoutX="52.0" layoutY="466.0" mnemonicParsing="false" onAction="#Delivery" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #abebc6;" text="Delivery" />
+                  <Button fx:id="ExitDashBoard" layoutX="22.0" layoutY="530.0" mnemonicParsing="false" onAction="#ExitDashBoard" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: #ec7063;" text="Exit" />
+                  <Button fx:id="NextAbout" layoutX="121.0" layoutY="530.0" mnemonicParsing="false" onAction="#NextAbout" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #ec7063;" text="Next" />
+                  <Button fx:id="Orderbtn" layoutX="48.0" layoutY="205.0" mnemonicParsing="false" onAction="#Orderbtn" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #2ecc71;" text="Order" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="225.0" layoutY="16.0" prefHeight="574.0" prefWidth="366.0" style="-fx-background-color: #fae5d3;">
+               <children>
+                  <ImageView fx:id="imgdb2" fitHeight="577.0" fitWidth="359.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../pic/124901.png" />
+                     </image>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="WeServe" alignment="CENTER" contentDisplay="TEXT_ONLY" ellipsisString="......" layoutX="39.0" layoutY="52.0" lineSpacing="15.0" prefHeight="331.0" prefWidth="302.0" text=" WE SERVE FRESH FRUITS &amp; PRODUCTS" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS" underline="true" wrapText="true">
+                     <font>
+                        <Font name="Elephant Italic" size="24.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Label>
+                  <Label fx:id="Wedeliver" layoutX="67.0" layoutY="354.0" prefHeight="20.0" prefWidth="231.0" text="we deliver organic fruits &amp; products" textFill="#fcfafa" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ViewDetails" layoutX="130.0" layoutY="418.0" mnemonicParsing="false" onAction="#ViewDetails" style="-fx-background-color: #00FF33;" text="View Details" textFill="#1a1818">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

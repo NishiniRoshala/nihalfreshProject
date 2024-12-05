@@ -1,0 +1,89 @@
+package lk.ijse.gdse71.model;
+
+
+import lk.ijse.gdse71.db.DBConnection;
+import lk.ijse.gdse71.dto.SupplierDTO;
+
+import java.sql.*;
+        import java.util.ArrayList;
+
+public class SupplierModel {
+
+    public boolean saveSupplier(SupplierDTO supplierDTO) throws SQLException {
+        String sql = "INSERT INTO supplier (supplier_id, name, contact_person, email, phone) VALUES (?, ?, ?, ?, ?)";
+        try (Connection connection = DBConnection.getInstance().getConnection();
+             PreparedStatement pst = connection.prepareStatement(sql)) {
+
+            pst.setString(1, supplierDTO.getSupplierId());
+            pst.setString(2, supplierDTO.getName());
+            pst.setString(3, supplierDTO.getContactPerson());
+            pst.setString(4, supplierDTO.getEmail());
+            pst.setString(5, supplierDTO.getPhone());
+
+            return pst.executeUpdate() > 0;
+        }
+    }
+
+    public boolean updateSupplier(SupplierDTO supplierDTO) throws SQLException {
+        String sql = "UPDATE supplier SET name = ?, contact_person = ?, email = ?, phone = ? WHERE supplier_id = ?";
+        try (Connection connection = DBConnection.getInstance().getConnection();
+             PreparedStatement pst = connection.prepareStatement(sql)) {
+
+            pst.setString(1, supplierDTO.getName());
+            pst.setString(2, supplierDTO.getContactPerson());
+            pst.setString(3, supplierDTO.getEmail());
+            pst.setString(4, supplierDTO.getPhone());
+            pst.setString(5, supplierDTO.getSupplierId());
+
+            return pst.executeUpdate() > 0;
+        }
+    }
+
+    public boolean deleteSupplier(String supplierId) throws SQLException {
+        String sql = "DELETE FROM supplier WHERE supplier_id = ?";
+        try (Connection connection = DBConnection.getInstance().getConnection();
+             PreparedStatement pst = connection.prepareStatement(sql)) {
+
+            pst.setString(1, supplierId);
+
+            return pst.executeUpdate() > 0;
+        }
+    }
+
+    public ArrayList<SupplierDTO> getAllSuppliers() throws SQLException {
+        String sql = "SELECT * FROM supplier";
+        try (Connection connection = DBConnection.getInstance().getConnection();
+             PreparedStatement pst = connection.prepareStatement(sql);
+             ResultSet rs = pst.executeQuery()) {
+
+            ArrayList<SupplierDTO> supplierList = new ArrayList<>();
+
+            while (rs.next()) {
+                supplierList.add(new SupplierDTO(
+                        rs.getString("supplier_id"),
+                        rs.getString("name"),
+                        rs.getString("contact_person"),
+                        rs.getString("email"),
+                        rs.getString("phone")
+                ));
+            }
+            return supplierList;
+        }
+    }
+
+    public String getNextSupplierId() throws SQLException {
+        String sql = "SELECT supplier_id FROM supplier ORDER BY supplier_id DESC LIMIT 1";
+        try (Connection connection = DBConnection.getInstance().getConnection();
+             PreparedStatement pst = connection.prepareStatement(sql);
+             ResultSet rs = pst.executeQuery()) {
+
+            if (rs.next()) {
+                String lastSupplierId = rs.getString("supplier_id");
+                int nextId = Integer.parseInt(lastSupplierId.substring(1)) + 1;
+                return "S" + String.format("%03d", nextId);
+            }
+            return "S001";
+        }
+    }
+}
+

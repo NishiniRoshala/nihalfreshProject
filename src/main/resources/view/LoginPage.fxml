@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bodyPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse71.controller.LoginPageController">
+   <children>
+      <ImageView fitHeight="593.0" fitWidth="590.0" layoutX="5.0" layoutY="5.0">
+         <image>
+            <Image url="@../../../../../../../../Pictures/Screenshots/Screenshot%202024-11-09%20175858.png" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <ImageView layoutX="372.0" layoutY="226.0">
+         <image>
+            <Image url="@../../../../../../../../AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/FB7B9FFA5462084C5F4E7E85A093E6D7/WhatsApp%20Image%202024-11-11%20at%2009.00.51_2f5c412d.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="An1" fitHeight="600.0" fitWidth="600.0" layoutX="9.0" layoutY="-5.0">
+         <image>
+            <Image url="@../pic/5656.png" />
+         </image>
+         <effect>
+            <Glow />
+         </effect>
+      </ImageView>
+      <Label layoutX="57.0" layoutY="51.0" prefHeight="158.0" prefWidth="530.0" text="WELCOME Nihal Fresh Fruits" textFill="#f9faf9">
+         <font>
+            <Font name="Bodoni MT Bold" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPassword" layoutX="57.0" layoutY="284.0" prefHeight="26.0" prefWidth="356.0" promptText="Password" />
+      <TextField fx:id="txtUserName" layoutX="56.0" layoutY="225.0" prefHeight="26.0" prefWidth="356.0" promptText="User Name" />
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="368.0" layoutY="285.0">
+         <image>
+            <Image url="@../../../../../../../../AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/AA942AB2BFA6EBDA4840E7360CE6E7EF/WhatsApp%20Image%202024-11-11%20at%2009.01.01_1006b521.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogin" layoutX="396.0" layoutY="344.0" mnemonicParsing="false" onAction="#LoginOnAction" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: #00FF00;" text="Log in" textFill="#fbfcfa">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="372.0" layoutY="225.0">
+         <image>
+            <Image url="@../../../../../../../../Downloads/icons8-name-48.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
